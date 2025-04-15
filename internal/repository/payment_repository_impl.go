@@ -2,7 +2,7 @@ package repository
 
 import (
 	"payment-options/internal/models"
-	"time"
+	// "time"
 )
 
 type paymentRepo struct{}
@@ -11,57 +11,58 @@ func NewPaymentRepo() PaymentRepository {
 	return &paymentRepo{}
 }
 
-func (r *paymentRepo) CallOVO() models.PaymentMethod {
-	time.Sleep(2 * time.Second) // Simulate network delay
+// CallLINKAja mengembalikan informasi metode pembayaran LINKAja.
+func (r *paymentRepo) CallLINKAja() models.PaymentMethod {
+	// time.Sleep(5 * time.Second) // Simulate network delay
 	return models.PaymentMethod{
 		Account: "6288xx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/ovo.jpg",
+		Balance: "12500",
+		Icon:    "https://sampleurl.com/linkaja.jpg",
 	}
 }
 
-func (r *paymentRepo) CallDANA() models.PaymentMethod {
+func (r *paymentRepo) CallJeniusPay() models.PaymentMethod {
 	return models.PaymentMethod{
 		Account: "6288xx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/dana.jpg",
+		Balance: "15000",
+		Icon:    "https://sampleurl.com/jenius.jpg",
 	}
 }
 
-func (r *paymentRepo) CallGoPay() models.PaymentMethod {
+func (r *paymentRepo) CallBluePay() models.PaymentMethod {
 	return models.PaymentMethod{
 		Account: "6288xx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/gopay.jpg",
+		Balance: "8000",
+		Icon:    "https://sampleurl.com/bluepay.jpg",
 	}
 }
 
-func (r *paymentRepo) CallShopee() models.PaymentMethod {
+func (r *paymentRepo) CallOCTO() models.PaymentMethod {
 	return models.PaymentMethod{
 		Account: "6288xx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/shopee.jpg",
+		Balance: "20000",
+		Icon:    "https://sampleurl.com/octo.jpg",
 	}
 }
 
-func (r *paymentRepo) CallOneKlik() models.PaymentMethod {
+func (r *paymentRepo) CallQRIS() models.PaymentMethod {
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "ID10xx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/oneklik.jpg",
+		Balance: "0",
+		Icon:    "https://sampleurl.com/qris.jpg",
 	}
 }
 
-func (r *paymentRepo) CallBRIDD() models.PaymentMethod {
+func (r *paymentRepo) CallBCAKlikPay() models.PaymentMethod {
 	return models.PaymentMethod{
 		Account: "6288xx",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/bridd.jpg",
+		Balance: "25000",
+		Icon:    "https://sampleurl.com/bcaklikpay.jpg",
 	}
 }
